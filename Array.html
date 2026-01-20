@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+ <script>
+    // note
+    //----------------------------------------------------------------------------------------------------------------
+    //day1 --1 ---
+    //-----------------------------------------------------------------------------------------------
+    // Array : it's is used for multiple value to Store in the container for different data types.
+    //it's Acess of the Element of the Array for the help of indexing After that you could be Access
+    //  All element for the Arrays 
+    // just like the write the consloe.log(Name of the Arrays) 
+
+    // Array Syntax
+    // let Arr = ["neha",21,"neha@gamil.com",true]
+
+    // this is wrtie a Arrays in the javaScript.
+    //
+    //-------------------------------------------------------------------------------------------
+    // first Array code 
+    //-------------------------------------------------------------------------------------------
+    //  let Arr = ["neha",21,"neha@gamil.com",true]
+    //  console.log(Arr);
+    //-------------------------------------------------------------------------------------------
+    // Array Expression : it's also repersenting Arrays but this type Expression direct call the 
+    // Super-class to create array 
+    //------------------------------------------------------------------------------------------ 
+    //   Example :
+    //------------------------------------------------------------------------------------------
+    // let arr2 = new Array();
+    // console.log(arr2);
+    // arr2[0] ="neha";
+    // arr2[1] = 24;
+    // arr2[2]= "nehashrama@gmail.com";
+    // arr2[3] = true   
+    // console.log(arr2);
+    //-------------------------------------------------------------------------------------------
+    // let arr3 = new Array("rahul",25,"rahul@gmail.com",true,"den")
+    // console.log(arr3);
+    //-------------------------------------------------------------------------------------------
+    // the size of array is Dynamic increase but define the minimum element of Array
+    //-------------------------------------------------------------------------------------------
+    // let arr4 = new Array(4)
+    // arr4[0] = 1
+    // arr4[1] = 2
+    // arr4[2] = 3
+    // arr4[3] = 4
+    // arr4[4] = 6
+    // arr4[5] = 9
+    // console.log(arr4);
+    //--------------------------------------------------------------------------------------------
+    // nested Array : which means Array declearing the inside of Array and access
+    //--------------------------------------------------------------------------------------------
+    // let Arr5 = [[3,5],[7,4]];
+    // console.log(Arr5[1][1]);
+    //--------------------------------------------------------------------------------------------
+    //traversing of Array: which mean accesing each element one by one 
+    //--------------------------------------------------------------------------------------------
+    // let arr6 = [1,25,69,56,5,6];
+    // for(let i = 0;i<arr6.length;i++){
+    //     console.log(arr6[i]);
+        
+    // }
+    //---------------------------------------------------------------------------------------------
+    //length of Arrays is define metheod  to find out the Array length : method :length()
+    //---------------------------------------------------------------------------------------------
+    // let arr7 = [1,2,5,6,8,9,6,6,5]
+    // console.log(arr7.length);
+    //---------------------------------------------------------------------------------------------
+    // normal array element itration of arrays element
+    //--------------------------------------------------------------------------------------------
+    // let Student =["neha",21,"react"];
+    // let a = Student[0]
+    // console.log(a);
+
+    // let b = Student[1]
+    // console.log(b);
+    //-------------------------------------------------------------------------------------------
+    //de-Structuring : it is a concept to access element of Array to perform create a structur  
+    // for the array element
+    //----------------------------------------------------------------------------------------
+    // let Student1 =["neha",21,"react"];
+    // let [name,age,subject] = Student
+    //     console.log(name);
+    //     console.log(age);
+    //---------------------------------------------------------------------------------------------
+    // nested destructuring example
+    //----------------------------------------------------------------------------------------------
+    // let data =[1,[2,3]] 
+    // let [n1,[n2,n3]]=data 
+    // console.log(n1);
+    // console.log(n2);
+    // console.log(n3);
+    //----------------------------------------------------------------------------------------------
+    // multiple nesting example
+    //---------------------------------------------------------------------------------------------
+    // let data1 =[1,[2,[3,4]] ]
+    // let [n1,[n2,[n3,n4]]]=data1 
+    // console.log(n1);
+    // console.log(n2);
+    // console.log(n3);
+    // console.log(n4);
+    //----------------------------------------------------------------------------------------------
+    // note : Arrays de-structuring is based on the indexing 
+    //----------------------------------------------------------------------------------------------
+    // function data([n1,n2,name]){
+    //     //let[n1,n2,name] = n
+    //     console.log(n1);
+    //     console.log(n2);
+    //     console.log(name);
+    // }
+
+    // data([2,3,"neha"])
+    //----------------------------------------------------------------------------------------------
+    //example
+    //----------------------------------------------------------------------------------------------
+    // let  student =["neha",21,"React"]
+    // let [name,,subject]=student
+    // console.log(name);
+    // console.log(subject);
+    //----------------------------------------------------------------------------------------------
+    // push method : it is used for add  element of  arrays for last index 
+    //----------------------------------------------------------------------------------------------
+    // let num = [1,3,5,6]
+    // num.push(7)
+    // console.log(num);
+    //----------------------------------------------------------------------------------------------
+    //call by refrence : it is pass  refrence or value for the num to num1 then any changing
+    // num and num1 to reflact to both of them  which means any copy of  first array is not eist 
+    // in the memory
+    //----------------------------------------------------------------------------------------------
+    //  let num = [1,3,5,6]
+    //  let num1 = num
+    
+    // console.log(num);
+    
+    // console.log(num1);
+    // num1.push(7)
+     
+    // console.log(num);
+    
+    // console.log(num1);
+    //---------------------------------------------------------------------------------------------
+    // cloneing Array :it  concept to cloneing the Array .its help to call by refrence to store the 
+    // previous arrays element
+    // its two type of cloneing:
+    // 1. Shellow cloneing
+    // 2. deep cloneing
+    //---------------------------------------------------------------------------------------------
+    // normal cloneing : pass the address of array
+    //---------------------------------------------------------------------------------------------
+    // const arr = [1,5,6,8];
+    // const clone = arr;
+    // console.log(arr);
+    // console.log(clone);
+    // arr.push(7)
+    // console.log(arr);
+    // console.log(clone);
+    //--------------------------------------------------------------------------------------------
+    // Explicit way to clone the array  (...arr) pass  the value of the Array that could be copy
+    // spread opreater 
+    // Way of cloneing througth some method 
+    //-------------------------------------------------------------------------------------------
+    // shellow copy : 
+    //--------------------------------------------------------------------------------------------
+    // const arr = [1,5,6,8];
+    // const clone = [...arr]
+    // console.log(arr);
+    // console.log(clone);
+    // arr.push(7)
+    // clone.push(3)
+    // console.log(arr);
+    // console.log(clone);
+    //-------------------------------------------------------------------------------------------
+    // const arr = [1,5,6,8];
+    // const clone = arr.slice();
+    // console.log(arr);
+    // console.log(clone);
+    // arr.push(7);
+    // clone.push(3);
+    // console.log(arr);
+    // console.log(clone);
+    //-------------------------------------------------------------------------------------------
+    // const arr = [1,5,9,8];
+    // const clone = Array.from(arr)
+    // console.log(arr);
+    // console.log(clone);
+    // arr.push(7);
+    // clone.push(3);
+    // clone.pop()
+    // arr.push(6)
+    // console.log(arr);
+    // console.log(clone);    
+    //------------------------------------------------------------------------------------------
+    // const arr = [1,5,9,8];
+    // const clone =[].concat(arr)
+    // console.log(arr);
+    // console.log(clone);
+    // arr.push(7);
+    // clone.push(3);
+    // clone.pop();
+    // arr.push(6);
+    // console.log(arr);
+    // console.log(clone); 
+    
+    //-------------------------------------------------------------------------------------------
+    // map : map is used for return condtion is fullfill then array as a element true/false
+    //-------------------------------------------------------------------------------------------
+    // let arr = [1,5,9,8];
+    //  let dd = arr.map((item)=>{
+    //     return item%2==0
+
+    //  })
+    //  console.log(dd);
+    //  dd.push(56)
+    //  console.log(arr);
+    //  console.log(dd);
+    //--------------------------------------------------------------------------------------------
+     // let arr = [1,5,9,8];
+    //  let dd = arr.map((item)=>{000
+    
+    //     return item0
+
+    //  })
+    //  console.log(dd);
+    //  dd.push(56)
+    //  console.log(arr);
+    //  console.log(dd);
+    //-----------------------------------------------------------------------------------------------
+    // filter :its is used form filter arrays element to fullfill his return conditon  as Arrys;
+    //-----------------------------------------------------------------------------------------------
+    //   let arr = [1,5,9,8];
+    //  let dd = arr.map((item)=>{
+    //     return item%2==0
+
+    //  })
+    //  console.log(dd);
+    //  dd.push(56)
+    //  console.log(arr);
+    //  console.log(dd);
+    //----------------------------------------------------------------------------------------------
+    // 
+    //----------------------------------------------------------------------------------------------
+    // let Student=[
+    //     {firstname : 'neha',lastname:'kumari',marks : 56,age:23},
+    //     {firstname : 'neha',lastname:'kumari',marks : 56,age:23},
+    //     {firstname : 'neha',lastname:'kumari',marks : 56,age:23},
+    //     {firstname : 'neha',lastname:'kumari',marks : 56,age:23}
+    // ]
+    // let fullname = Student.map((item)=>{
+    //     return `${item.firstname}-${item.lastname}`
+    //  })
+    //  console.log(fullname);
+    //----------------------------------------------------------------------------------------------
+    //
+    //---------------------------------------------------------------------------------------------
+    // let arr8=[
+    //     {name:"rohit",active:true},
+    //     {name:"sammer",active:false},
+    //     {name:"Shoarb",active:true},
+    //     {name:"bulbul",action:false}
+    // ]
+    // let Act = arr8.map((item)=>{
+    //     if(item.active === true){
+    //         return `{ name :${item.name}} ,{active :${item.active}}`;
+    //     }
+    //     else{
+    //         return null;
+    //     }
+    // })
+    // console.log(Act);
+    // //-----------------------------------------------------------------------------------------------
+    // let arr9=[
+    //     {name:"rohit",active:true},
+    //     {name:"sammer",active:false},
+    //     {name:"Shoarb",active:true},
+    //     {name:"bulbul",action:false}
+    // ]
+    // let act= arr9.filter( item => {
+    //     return item.active
+    // })
+    // console.log(act
+
+    // );
+    //--------------------------------------------------------------------------------------------------
+     // let arr9=[
+    //     {name:"rohit",active:true},
+    //     {name:"sammer",active:false},
+    //     {name:"Shoarb",active:true},
+    //     {name:"bulbul",action:false}
+    // ]
+    // let act= arr9.map( item => {
+    //     return item.active
+    // })
+    // console.log(act
+
+    // );
+    //-------------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------------
+    // let arr9=[
+    //     {name:"rohit",active:true},
+    //     {name:"sammer",active:false},
+    //     {name:"Shoarb",active:true},
+    //     {name:"bulbul",action:false}
+    // ]
+    // let act= arr9.filter( item => {
+    //     return !(item.active)
+    // })
+    // console.log(act);
+    // //--------------------------------------------------------------------------------------------------------
+    // let arr10 = ["raj","neha","bulbul","ranul","kunal"]
+    // let acti = arr10.filter(item => {
+    //     return item.length == 5
+    // })
+    // console.log(acti);
+    // //-------------------------------------------------------------------------------------------------------
+    // let arr1 = ["raj","neha","bulbul","ranul","kunal"]
+    // let a = arr1.map((item)=>{
+    //     if(item.length ===4){
+    //         return `[{${item}}]`
+    //     }
+    // })
+    // console.log(a
+
+    // );
+    // //-------------------------------------------------------------------------------------------------------
+    // let arr2 = [0,5,7,9,4,8,0,4,5,2,0,5,8,9]
+    // let actio = arr2.filter(item => {
+    //     return item !=0
+    // })
+    // console.log(actio);
+    // //------------------------------------------------------------------------------------------------------
+    // let arr3 = [0,5,7,9,4,8,0,4,5,2,0,5,8,9]
+    // let action = arr3.map((item)=>{
+    //     if(item !==0){
+    //         return `[${item}]`
+    //     }
+    // })
+    // console.log(action);
+    //------------------------------------------------------------------------------------------------------
+    // let arr = ["Apple","Banana","mango","Avocado"]
+    // let a = arr.filter((item)=>{
+    //     return item[0]=="A"
+    // })
+    // console.log(a);
+    //-----------------------------------------------------------------------------------------------------
+    //  let b = [20,30,40,50,60,70,80]
+    //  let c = b.filter(( _,index) =>{
+    //     return index % 2==0
+   
+    //  }) 
+   
+    //  console.log(c);
+   
+    //  //----------------------------------------------------------------------------------------------------
+   
+    //   let d = [20,30,40,50,60,70,80]
+   
+    //  let e = d.map(( item,index) =>{
+   
+    //     if(index%2==0){
+   
+    //      return item
+   
+    //     }
+   
+    //  }) 
+    //  console.log(e);  
+    //----------------------------------------------------------------------------------------------------------
+    //--forEach : just to perform to manupulation but not return any array just like mapp ,
+    //----------------------------------------------------------------------------------------------------------
+   //  let Arr = [4,5,6,9,2,8,1,6]
+   //  Arr.forEach((item)=>{
+   //    console.log(item);
+      
+   //  })
+   //  //-----------------------------------------------------------------------------------------------------------
+   //  let arr = [4,5,6,9,2,8,1,6]
+   //  Arr.forEach((item,index,arr)=>{
+   //    console.log(`${index} = ${item} and Array is${arr}`);
+      
+   //  })
+   //--------------------------------------------------------------------------------------------------------------
+   // let Arr = [4,5,6,9,2,8,1,6]
+   //  Arr.forEach((item ,index,arr)=>{
+   //    Arr[index] = item*2;
+      
+   //  })
+   //  console.log(Arr);
+
+   //----------------------------------------------------------------------------------------------------------------
+   // let Arr = [4,5,6,9,2,8,1,6]
+   // let result=0;
+   //  for(let i=0; i<=Arr.length;i++){
+   //     result = Arr[i]*2;
+   //     console.log(result);
+   //  }
+    //-*------------------------------------------------------------------------------------------------------------
+    //REPTION OF ELEMENT in the Array:
+    //-------------------------------------------------------------------------------------------------------------
+   //  let arr2 =[2,3,4,6,3,7,6,3,8,3]
+   //  let count =0;
+   //  arr2.forEach((item)=>{
+   //    if(item == 3){
+   //       count = count+1
+   //    }
+      
+      
+   //  })
+   //  console.log(count);
+   //-----------------------------------------------------------------------------------------------------------------
+   //day 
+   //------------------------------------------------------------------------------------------------------------------
+//    let arr4 = [[1,2],[3,4],[5,6]]
+//    let arr=[];
+//    arr4.forEach((item)=>{  
+//     arr.push(...item)
+//    })
+//    console.log(arr);
+   //-----------------------------------------------------------------------------------------------------------------
+    let arr4 = [[1,2],[3,4],[5,6]]
+   let arr=[];
+   arr4.forEach((item)=>{  
+      item.forEach((value)=>{
+        arr.push(value)
+      })
+   })
+   console.log(arr);
+   
+
+    
+
+    
+
+   
+
+
+    
+    
+    
+
+
+ </script>
+</body>
+</html>
